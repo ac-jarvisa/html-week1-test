@@ -1,0 +1,129 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/******************************************************
+                Main Styles
+******************************************************/
+
+/* to target a tag, just use the tag name */
+html{
+    background:aquamarine;
+    /* font-family is an example of a degredation list
+    if the brower can't find the first font in the list,
+    it will try the second, and so on */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:18px;
+}
+
+body{
+    /* this adds some spacing between lines, great for
+    accessibility */
+    line-height:1.6;
+    width:800px;
+    /* two values in margin mean top-bottom, left-right
+    margih 0 auto centres the element in its parent */
+    margin:0 auto;
+    background-color:antiquewhite;
+}
+
+/* to target an id, use a # 
+ an ID always overrides a class, even if it comes before */
+#larger{
+    font-size:48px;
+}
+
+/* to target a class, use a . */
+.large{
+    font-size:24px;
+    font-size:bold;
+}
+
+/* the CSS box model has margin, border, and padding
+    margin is on the outside and pushes other elements away
+    padding is on the inside and pushes content in
+         (away from the edge)
+    border exists in between the two
+    all of these things make your element larger
+*/
+main{
+    margin: 10px; /* one value means equal on all sides */
+    padding: 15px;
+    border: 2px solid black;
+    /* the main element is now
+        800px + 10x2 + 15x2 + 2x2
+        or... 854px wide */
+}
+
+/* target only the paragraph inside main */
+main p{
+    color:red;
+}
+
+main img{
+    width:30%;
+    /* floating an image will make text sit beside it */
+    float:left;
+}
+
+/* use clearfix to make elements see the height of floated
+things inside of them */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+
+
+
